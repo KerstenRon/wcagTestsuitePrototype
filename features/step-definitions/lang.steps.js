@@ -19,7 +19,7 @@
     browser.url('https://www.t-systems-mms.com/');
  });
  
- When('I listen to my screenreader, that ist reading the websites content', () => {
+ When('I listen to my screenreader that is reading the websites content', () => {
      let html = $('html');
      lang = html.getAttribute('lang');
      xmlLang = html.getAttribute('xml:lang');
