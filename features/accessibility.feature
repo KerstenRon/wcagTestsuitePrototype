@@ -12,7 +12,7 @@ Feature: WCAG Test Suite
 
   @3.1.1a
   @implemented
-  # 3.1.1a Hauptsprache angegeben - Erfolgskriterium: https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html
+  # 3.1.1 Language of Page - Erfolgskriterium: https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html
   # Schrittdefinition: features/step-definitions/lang.steps.js
   Scenario: Persons with disabilities can perceive the content of a website in his chosen language
     Given I have to use a screenreader because I can not see well

@@ -4,7 +4,7 @@
  * @version 1.0.0
  * @author Ron Kersten
  *
- * @description Schrittdefinition zu Testfall 3.1.1a Hauptsprache angegeben - Erfolgskriterium: https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html
+ * @description Schrittdefinition zu Testfall 3.1.1 Language of Page - Erfolgskriterium: https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html
  */
 
  const { Given, When, Then } = require('@cucumber/cucumber');
