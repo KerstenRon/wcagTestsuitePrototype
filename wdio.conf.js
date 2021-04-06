@@ -1,3 +1,16 @@
+/**
+* wdio.config.js
+*
+* @version 1.0.1
+* @author Ron Kersten
+*
+* @description Konfigurationsdatei des WebdriverIO Testframeworks
+*
+ */
+
+const path = require("path");
+require('dotenv').config();
+
 exports.config = {
     //
     // ====================
@@ -135,14 +148,19 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec','junit'],
+    reporters: [
+        'spec',
+    //    'junit'
+    ],
 
 
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
-        require: ['./features/step-definitions/steps.js'],
+        require: [
+            path.join(__dirname, 'features', 'step-definitions', 'lang.steps.js'),
+        ],
         // <boolean> show full backtrace for errors
         backtrace: false,
         // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
@@ -162,7 +180,7 @@ exports.config = {
         // <boolean> fail if there are any undefined or pending steps
         strict: false,
         // <string> (expression) only execute the features or scenarios with tags matching the expression
-        tagExpression: '',
+        tagExpression: '@implemented',
         // <number> timeout for step definitions
         timeout: 60000,
         // <boolean> Enable this config to treat undefined definitions as warnings.
